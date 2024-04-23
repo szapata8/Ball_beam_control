@@ -1,0 +1,5 @@
+GitHub Repo to Stepper Driver Library and Connection guide (DRV8834): https://github.com/laurb9/StepperDriver
+
+GitHub Repo for ultrasonic distance sensor: https://github.com/d03n3rfr1tz3/HC-SR04
+
+Excellent video review of VL53L0X V2: https://www.youtube.com/watch?v=EvaYQMMEtvg

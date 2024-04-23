@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Home Page</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <link rel= "stylesheet" type= "text/css" href= "/static/styles/home.css">
+
+        <h1>SEESAW SYSTEM</h1>
+        <h3>HARDWARE STATES</h3>
+        <span>ANGLE: <span id="angle_value">0</span>&deg;</span><br>
+        <span>BALL POSITION: <span id="ball_position_value">0</span> cm</span>
+        <p>--------------------------------------------------------</p>
+        <input type="radio" id="manual_control_radio" name="modality" value="manual" checked="checked" onclick="set_manual_control_modality()"><h3>SEESAW MANUAL CONTROL</h3>
+        <br>
+        <button onmousedown="rotate_ccw()" onmouseup="stop_ccw()" type="button">Move CCW</button>
+        <button onmousedown="set_zero()" type="button">Set Zero</button>
+        <button onmousedown="rotate_cw()" onmouseup="stop_cw()" type="button">Move CW</button>
+        <br><br>
+        <button onclick="step_ccw()" type="button">Step CCW</button>
+        <button onclick="ustep_ccw()" type="button">Micro-step CCW</button>
+        <button onclick="ustep_cw()" type="button">Micro-step CW</button>
+        <button onclick="step_cw()" type="button">Step CW</button>
+        <br><br>
+
+        <p>--------------------------------------------------------</p>
+        <input type="radio" id="pid_control_radio" name="modality" value="control" onclick="set_pid_control_modality()"><h3>SEESAW PID CONTROL</h3>
+        <!-- <input type="radio" id="pid" name="feedback_controller" value="pid" checked="checked">
+            <label for="pid">Proportional Integral Derivative (PID)</label><br>
+        <input type="radio" id="lqr" name="feedback_controller" value="lqr">
+            <label for="lqr">Linear Quadratic Regulator (LQR)</label> -->
+
+        <p>Desired Angle (drag and drop):</p>
+        <input type="range" min="-25" max="25" value="0" id="target_slider"><span id="target_slider_value"> 0 cm</span><br>
+        
+        <input type="button" value="reset_gains" onclick="reset_pid_gains()"><br>
+        <span>K_p </span><input id="kp_input"><input type="button" id = "kp_set_btn" value="set" onclick="set_kp_value()"><br>
+        <span>K_i </span><input id="ki_input"><input type="button" id = "ki_set_btn" value="set" onclick="set_ki_value()"><br>
+        <span>K_d </span><input id="kd_input"><input type="button" id = "kd_set_btn" value="set" onclick="set_kd_value()"><br>
+            
+        <script src="static/home.js"></script>
+    </body>
+
+</html>

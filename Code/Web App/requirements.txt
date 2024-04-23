@@ -1,0 +1,16 @@
+bidict==0.23.1
+click==8.1.7
+colorama==0.4.6        
+Flask==1.1.2
+Flask-SocketIO==4.3.1  
+h11==0.14.0
+itsdangerous==1.1.0    
+Jinja2==2.11.2
+MarkupSafe==1.1.1      
+pyserial==3.5
+python-engineio==3.13.2
+python-socketio==4.6.0 
+simple-websocket==1.0.0
+six==1.16.0
+Werkzeug==1.0.1        
+wsproto==1.2.0
